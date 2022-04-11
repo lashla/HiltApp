@@ -11,6 +11,9 @@ import javax.inject.Inject
 class LoginViewModel@Inject constructor(private val userRepository: UserRepository,
                                         private val loginRepository: LoginRepository): ViewModel() {
 
+    init {
+        getLoginData()
+    }
     var userData = MutableLiveData<String>()
     fun getUserData(){
         userData.value = userRepository.getUserText()
