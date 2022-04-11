@@ -12,13 +12,10 @@ import kotlinx.android.synthetic.main.fragment_login.*
 @AndroidEntryPoint
 class LoginFragment: Fragment(R.layout.fragment_login) {
 
-    private lateinit var viewModel: LoginViewModel
+    private var viewModel: LoginViewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
-        viewModel.getLoginData()
         initView()
         setupButtonListeners()
     }
@@ -35,5 +32,8 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
         viewModel.userData.observe(viewLifecycleOwner){
             tvLoginUser.text = it
         }
+    }
+    init {
+        viewModel.getLoginData()
     }
 }
