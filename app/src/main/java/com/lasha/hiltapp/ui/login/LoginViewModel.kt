@@ -10,11 +10,12 @@ import javax.inject.Inject
 @HiltViewModel
 class LoginViewModel@Inject constructor(private val userRepository: UserRepository,
                                         private val loginRepository: LoginRepository): ViewModel() {
-
+    var userData = MutableLiveData<String>()
     init {
+        userData = MutableLiveData<String>()
         getLoginData()
     }
-    var userData = MutableLiveData<String>()
+
     fun getUserData(){
         userData.value = userRepository.getUserText()
     }
