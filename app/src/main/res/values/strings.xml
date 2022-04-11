@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HiltApp</string>
+    <string name="show_users">Show users</string>
+    <string name="go_to_files">Go to files</string>
+    <string name="show_files">show files</string>
+</resources>
