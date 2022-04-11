@@ -1,7 +1,7 @@
 package com.lasha.hiltapp.domain.di
 
-import com.lasha.hiltapp.data.FilesServiceImpl
-import com.lasha.hiltapp.domain.repositoryes.FilesInterface
+import com.lasha.hiltapp.data.api_Implementations.FilesServiceImpl
+import com.lasha.hiltapp.data.repo_implementations.FilesRepositoryImpl
 import com.lasha.hiltapp.domain.repositoryes.FilesRepository
 import dagger.Module
 import dagger.Provides
@@ -16,8 +16,8 @@ class FilesModule  {
 
     @Provides
     @Singleton
-    fun providesRepository() : FilesInterface {
-        return FilesRepository(FilesServiceImpl())
+    fun providesRepository() : FilesRepository {
+        return FilesRepositoryImpl(FilesServiceImpl())
     }
 
 }

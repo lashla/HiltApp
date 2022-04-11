@@ -1,19 +1,10 @@
-package com.lasha.hiltapp.data
+package com.lasha.hiltapp.data.api_Implementations
 
-import androidx.activity.ComponentActivity
+import com.lasha.hiltapp.domain.api.FilesService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
-
-@Singleton
-interface FilesService {
-    fun getFile(fileText: String): String{
-        return fileText
-    }
-
-}
 
 @Module
 @InstallIn(SingletonComponent::class)

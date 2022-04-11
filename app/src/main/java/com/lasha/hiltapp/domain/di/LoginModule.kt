@@ -1,9 +1,7 @@
 package com.lasha.hiltapp.domain.di
 
-import com.lasha.hiltapp.data.LoginServiceImpl
-import com.lasha.hiltapp.domain.repositoryes.FilesInterface
-import com.lasha.hiltapp.domain.repositoryes.FilesRepository
-import com.lasha.hiltapp.domain.repositoryes.LoginInterface
+import com.lasha.hiltapp.data.api_Implementations.LoginServiceImpl
+import com.lasha.hiltapp.data.repo_implementations.LoginRepositoryImpl
 import com.lasha.hiltapp.domain.repositoryes.LoginRepository
 import dagger.Module
 import dagger.Provides
@@ -17,8 +15,8 @@ class LoginModule  {
 
     @Provides
     @Singleton
-    fun providesRepository() : LoginInterface {
-        return LoginRepository(LoginServiceImpl())
+    fun providesRepository() : LoginRepository{
+        return LoginRepositoryImpl(LoginServiceImpl())
     }
 
 }

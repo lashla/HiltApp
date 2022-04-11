@@ -1,4 +1,4 @@
-package com.lasha.hiltapp.data
+package com.lasha.hiltapp.domain.api
 
 import dagger.Module
 import dagger.Provides
@@ -13,11 +13,3 @@ interface UserService {
     }
 }
 
-@Module
-@InstallIn(SingletonComponent::class)
-class UserServiceImpl: UserService {
-    @Provides
-    override fun getUser(): String {
-        return super.getUser()
-    }
-}
