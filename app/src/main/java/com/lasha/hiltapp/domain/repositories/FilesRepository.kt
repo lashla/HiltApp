@@ -5,7 +5,6 @@ import javax.inject.Singleton
 
 @Singleton
 interface FilesRepository {
-    fun getFileString():String {
-        return "FileString"
-    }
+    fun getFileString():String = "FileFirstText"
+
 }

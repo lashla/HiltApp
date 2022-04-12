@@ -19,7 +19,8 @@ class LoginViewModel@Inject constructor(private val userRepository: UserReposito
     fun getUserData(){
         userData.value = userRepository.getUserText()
     }
-    fun getLoginData(){
+
+    private fun getLoginData(){
         userData.value = loginRepository.getLoginText()
     }
 }

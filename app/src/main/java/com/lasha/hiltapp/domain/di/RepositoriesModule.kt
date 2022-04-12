@@ -2,10 +2,12 @@ package com.lasha.hiltapp.domain.di
 
 import com.lasha.hiltapp.data.api.FilesServiceImpl
 import com.lasha.hiltapp.data.api.LoginServiceImpl
-import com.lasha.hiltapp.data.api.UserServiceImpl
 import com.lasha.hiltapp.data.repositories.FilesRepositoryImpl
 import com.lasha.hiltapp.data.repositories.LoginRepositoryImpl
 import com.lasha.hiltapp.data.repositories.UserRepositoryImpl
+import com.lasha.hiltapp.domain.api.FilesService
+import com.lasha.hiltapp.domain.api.LoginService
+import com.lasha.hiltapp.domain.api.UserService
 import com.lasha.hiltapp.domain.repositories.FilesRepository
 import com.lasha.hiltapp.domain.repositories.LoginRepository
 import com.lasha.hiltapp.domain.repositories.UserRepository
@@ -17,24 +19,24 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class RepositoriesModule {
+object RepositoriesModule{
 
     @Provides
     @Singleton
-    fun providesUserRepository() : UserRepository {
-        return UserRepositoryImpl(UserServiceImpl())
+    fun providesUserRepository(provideUserService: UserService) : UserRepository {
+        return UserRepositoryImpl(provideUserService)
     }
 
     @Provides
     @Singleton
-    fun providesLoginRepository() : LoginRepository {
-        return LoginRepositoryImpl(LoginServiceImpl())
+    fun providesLoginRepository(provideLoginService: LoginService) : LoginRepository {
+        return LoginRepositoryImpl(provideLoginService)
     }
 
     @Provides
     @Singleton
-    fun providesFilesRepository() : FilesRepository {
-        return FilesRepositoryImpl(FilesServiceImpl())
+    fun providesFilesRepository(provideFilesService: FilesService) : FilesRepository {
+        return FilesRepositoryImpl(provideFilesService)
     }
 
 }

@@ -1,12 +1,11 @@
 package com.lasha.hiltapp.data.repositories
 
-import com.lasha.hiltapp.data.api.FilesServiceImpl
+import com.lasha.hiltapp.domain.api.FilesService
 import com.lasha.hiltapp.domain.repositories.FilesRepository
 import javax.inject.Inject
 
-class FilesRepositoryImpl @Inject constructor(private val filesService: FilesServiceImpl):
-    FilesRepository {
+class FilesRepositoryImpl @Inject constructor(private val filesService: FilesService) : FilesRepository {
     override fun getFileString(): String {
-        return filesService.getFile("OtherFileStringDone")
+        return filesService.getFile()
     }
 }

@@ -8,6 +8,9 @@ import androidx.navigation.Navigation
 import com.lasha.hiltapp.R
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 
 @AndroidEntryPoint
 class LoginFragment: Fragment(R.layout.fragment_login) {
@@ -34,4 +37,5 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
             tvLoginUser.text = it
         }
     }
+
 }

@@ -5,6 +5,6 @@ import javax.inject.Singleton
 @Singleton
 interface FilesService {
 
-    fun getFile(fileText: String): String
+    fun getFile(): String
 }
 
