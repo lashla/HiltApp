@@ -1,11 +1,9 @@
-package com.lasha.hiltapp.data.repo_implementations
+package com.lasha.hiltapp.data.repositories
 
-import com.lasha.hiltapp.data.api_Implementations.FilesServiceImpl
-import com.lasha.hiltapp.domain.repositoryes.FilesRepository
+import com.lasha.hiltapp.data.api.FilesServiceImpl
+import com.lasha.hiltapp.domain.repositories.FilesRepository
 import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
 class FilesRepositoryImpl @Inject constructor(private val filesService: FilesServiceImpl):
     FilesRepository {
     override fun getFileString(): String {

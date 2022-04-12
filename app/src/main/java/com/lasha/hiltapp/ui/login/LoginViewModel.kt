@@ -2,8 +2,8 @@ package com.lasha.hiltapp.ui.login
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.lasha.hiltapp.domain.repositoryes.LoginRepository
-import com.lasha.hiltapp.domain.repositoryes.UserRepository
+import com.lasha.hiltapp.domain.repositories.LoginRepository
+import com.lasha.hiltapp.domain.repositories.UserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

@@ -1,4 +1,4 @@
-package com.lasha.hiltapp.domain.repositoryes
+package com.lasha.hiltapp.domain.repositories
 
 import javax.inject.Singleton
 
