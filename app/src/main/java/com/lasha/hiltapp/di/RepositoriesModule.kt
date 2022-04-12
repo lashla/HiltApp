@@ -1,7 +1,5 @@
-package com.lasha.hiltapp.domain.di
+package com.lasha.hiltapp.di
 
-import com.lasha.hiltapp.data.api.FilesServiceImpl
-import com.lasha.hiltapp.data.api.LoginServiceImpl
 import com.lasha.hiltapp.data.repositories.FilesRepositoryImpl
 import com.lasha.hiltapp.data.repositories.LoginRepositoryImpl
 import com.lasha.hiltapp.data.repositories.UserRepositoryImpl

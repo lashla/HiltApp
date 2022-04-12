@@ -1,4 +1,4 @@
-package com.lasha.hiltapp.domain.di
+package com.lasha.hiltapp.di
 
 import com.lasha.hiltapp.data.api.FilesServiceImpl
 import com.lasha.hiltapp.data.api.LoginServiceImpl
